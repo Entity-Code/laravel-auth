@@ -15,3 +15,11 @@ Route::get('/home', 'HomeController@index')
 //logica invio email 
 Route::post('/send', 'HomeController@sendMail')
     -> name('send-mail');
+
+//upload img
+Route::post('/update/user/icon', 'HomeController@updateUserIcon')
+    -> name('update-icon');
+
+//delete img
+Route::get('/clear/user/icon', 'HomeController@clearUserIcon')
+    -> name('clear-icon');
